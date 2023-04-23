@@ -60,12 +60,11 @@ class CharacterRecyclerView(
             intent.putExtra("position", holder.adapterPosition)
             context.startActivity(intent)
         }
-        println("12 : "+characterList.size)
+
         if (characterList[0].id == null) {
-            println("check 1")
+
             noCharText.visibility = View.VISIBLE
         } else {
-            println("check 2")
 
             noCharText.visibility = View.GONE
         }

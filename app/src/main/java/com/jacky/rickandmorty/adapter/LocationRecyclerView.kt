@@ -86,7 +86,7 @@ class LocationRecyclerView(
                                 characterModels = ArrayList(it)
 
                                 characterModels?.let { character ->
-                                    adapterCharacter = CharacterRecyclerView(character,noCharText)
+                                    adapterCharacter = CharacterRecyclerView(character, noCharText)
                                     recyclerViewCharacter.adapter = adapterCharacter
                                 }
                             }
@@ -114,7 +114,7 @@ class LocationRecyclerView(
                                 characterModels = listOf(it)
 
                                 characterModels?.let { character ->
-                                    adapterCharacter = CharacterRecyclerView(character,noCharText)
+                                    adapterCharacter = CharacterRecyclerView(character, noCharText)
                                     recyclerViewCharacter.adapter = adapterCharacter
                                 }
                             }
@@ -135,19 +135,6 @@ class LocationRecyclerView(
         }
         holder.itemView.setOnClickListener {
             selectedLocation = holder.adapterPosition
-            /*
-            if (locationList[position].residents.size == 0) {
-                android.os.Handler(Looper.getMainLooper()).postDelayed({
-                    noCharText.visibility = View.VISIBLE
-                }, 3000)
-            } else {
-                noCharText.visibility = View.GONE
-            }
-
-             */
-
-
-
             notifyDataSetChanged()
         }
 
